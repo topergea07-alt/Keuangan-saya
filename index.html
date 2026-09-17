@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Supaya tampilan bagus di HP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Keuangan Saya</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= HEADER ================= -->
+        <header>
+            <h1>💰 Keuangan Saya</h1>
+            <p>Catatan pemasukan & pengeluaran</p>
+        </header>
+
+
+        <!-- ================= SALDO ================= -->
+        <div class="saldo-card">
+
+            <p>Saldo Saat Ini</p>
+
+            <h2 id="saldo">Rp 0</h2>
+
+        </div>
+
+
+        <!-- ================= RINGKASAN ================= -->
+        <div class="summary">
+
+            <!-- Pemasukan -->
+            <div class="card pemasukan">
+
+                <p>📈 Pemasukan</p>
+
+                <h3 id="totalPemasukan">
+                    Rp 0
+                </h3>
+
+            </div>
+
+
+            <!-- Pengeluaran -->
+            <div class="card pengeluaran">
+
+                <p>📉 Pengeluaran</p>
+
+                <h3 id="totalPengeluaran">
+                    Rp 0
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= TOMBOL TAMBAH ================= -->
+        <button
+            class="btn-tambah"
+            onclick="tampilkanForm()">
+
+            + Tambah Transaksi
+
+        </button>
+
+
+        <!-- ================= FORM TRANSAKSI ================= -->
+        <div
+            class="form-container"
+            id="formContainer">
+
+            <h2>Tambah Transaksi</h2>
+
+
+            <!-- Jenis -->
+            <label for="jenis">
+                Jenis Transaksi
+            </label>
+
+            <select id="jenis">
+
+                <option value="pemasukan">
+                    Pemasukan
+                </option>
+
+                <option value="pengeluaran">
+                    Pengeluaran
+                </option>
+
+            </select>
+
+
+            <!-- Nominal -->
+            <label for="nominal">
+                Nominal
+            </label>
+
+            <input
+                type="number"
+                id="nominal"
+                placeholder="Contoh: 50000">
+
+
+            <!-- Kategori -->
+            <label for="kategori">
+                Kategori
+            </label>
+
+            <select id="kategori">
+
+                <option value="Gaji">
+                    Gaji
+                </option>
+
+                <option value="Makanan">
+                    Makanan
+                </option>
+
+                <option value="Transportasi">
+                    Transportasi
+                </option>
+
+                <option value="Tagihan">
+                    Tagihan
+                </option>
+
+                <option value="Belanja">
+                    Belanja
+                </option>
+
+                <option value="Hiburan">
+                    Hiburan
+                </option>
+
+                <option value="Kesehatan">
+                    Kesehatan
+                </option>
+
+                <option value="Pendidikan">
+                    Pendidikan
+                </option>
+
+                <option value="Lainnya">
+                    Lainnya
+                </option>
+
+            </select>
+
+
+            <!-- Tanggal -->
+            <label for="tanggal">
+                Tanggal
+            </label>
+
+            <input
+                type="date"
+                id="tanggal">
+
+
+            <!-- Catatan -->
+            <label for="catatan">
+                Catatan
+            </label>
+
+            <input
+                type="text"
+                id="catatan"
+                placeholder="Contoh: Makan siang">
+
+
+            <!-- Tombol simpan -->
+            <button
+                class="btn-simpan"
+                onclick="simpanTransaksi()">
+
+                Simpan Transaksi
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= RIWAYAT ================= -->
+        <div class="riwayat">
+
+            <h2>Riwayat Transaksi</h2>
+
+            <div id="daftarTransaksi">
+
+                <p class="kosong">
+                    Belum ada transaksi.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Menghubungkan JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
